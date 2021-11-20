@@ -14,7 +14,7 @@ Instituto Superior Técnico, Universidade de Lisboa
 The setup of the machines for this lab depends on the usage of UTM, a software that leverages QEMU under the hood to perform virtualization. 
 Add here instructions to install and better explanation on the topic as well as awareness and references and promiscuous mode 
 
-## 1.1 Setup the lab for VirtualBox
+## 1.1 Setup the lab for UTM
 
 To setup our lab environment to be used with VirtualBox, you need to have 3 instances of your VMs. You can follow the instructions in [here](https://github.com/tecnico-sec/Setup) to install 2 new machines from scratch, or you can clone the one you have been using so far.
 
