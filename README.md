@@ -50,9 +50,8 @@ The easier way to connect the VM1 and VM2 in the same network is to do the follo
 - Add the folling option: `vmnet-macos,mode=host,id=sw1`.
 
 
-Repeat for VM2 and VM3 but creating a second Network adapter in VM2 and calling the `Internal Network` sw-2.
-
-Finally, create a third Network adapter in VM2 that is `nat`-ed with your physical address. 
+Repeat for VM2 and for VM3. Also, create a second Network adapter in VM2 by repeating the same procedure and replacing the `sw1` for `sw2` in both VM2(second adapter) and VM3. Please note that you should always generate a new MAC Address for each adapter. 
+Finally, create a third Network adapter in VM2 that is `nat`-ed with your physical address. You can do this by going to `Network` tab, select `Shared Network` and press `save`.
 This interface will be used to access the Internet.
 
 Proceed now to 2.
