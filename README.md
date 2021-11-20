@@ -45,7 +45,7 @@ The easier way to connect the VM1 and VM2 in the same network is to do the follo
 - Edit the VM, go to `QEMU` section and scroll down until the last text box with the label `New...`. 
 - Add the following option: `-device` and press `Enter` at the end:
 - Go to `https://miniwebtool.com/mac-address-generator/`, click Generate MAC Address and copy the generated MAC.
-- A new line will appear. Add the following option: `virtio-net-pci,mac=<GENERATED MAC>,netdev=sw1` where <GENERATED MAC> is the MAC address generated in the previous step.
+- A new line will appear. Add the following option: `virtio-net-pci,mac=<GENERATED MAC>,netdev=sw1` where `<GENERATED MAC>` is the MAC address generated in the previous step.
 - Add the folling option: `-netdev`.
 - Add the folling option: `vmnet-macos,mode=host,id=sw1`.
 
