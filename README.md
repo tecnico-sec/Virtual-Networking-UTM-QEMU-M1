@@ -1,4 +1,4 @@
-Instituto Superior Técnico, Universidade de Lisboa
+Instituto Superior TÃ©cnico, Universidade de Lisboa
 
 **Network and Computer Security**
 
@@ -66,7 +66,7 @@ We will now configure the machines to the virtual network that connects VM1 to V
 
 We will now configure the IP network (supported by virtual switch sw-1) with static IP addresses. 
 VM1 and VM2 will talk using a subnet. 
-We will use the private IP addresses 192.168.0.0/24 (meaning that the subnet mask is 255.255.255.0 ¿ we can have 254 addresses to use (from 192.168.0.1 to 192.168.0.254). 
+We will use the private IP addresses 192.168.0.0/24 (meaning that the subnet mask is 255.255.255.0 Â¿ we can have 254 addresses to use (from 192.168.0.1 to 192.168.0.254). 
 Note that 192.168.0.255 is reserved for broadcast).
 Figure 3 presents and overview of the desired configuration. 
 The IP address of VM1 will be 192.168.0.100 and VM2 will be 192.168.0.10. 
@@ -171,7 +171,7 @@ Try to ping VM3 from VM1:
 $ ping 192.168.1.1
 ```
 
-It should return `Network is unreachable` because VM1 doesn¿t know where to send the packets addressed at network 192.168.1.X.
+It should return `Network is unreachable` because VM1 doesnÂ¿t know where to send the packets addressed at network 192.168.1.X.
 
 ### 2.3 Configure VM2 as gateway
 
@@ -279,7 +279,7 @@ Make sure you can detect ICMP packets originating at VM3 and with destination VM
 While still running /usr/sbin/tcpdump, open a telnet connection between VM1 and VM2 using user `seed` and password `dees`. 
 Verify that you can capture both the username and password with tcpdump.
 
-**You have successfully eavesdropped communications¿ But what is the difference between executing telnet from VM1 to VM3 with and without NAT (in interface enp0s8 of VM2)? Use tcpdump to analyse the output and compare the differences.**
+**You have successfully eavesdropped communicationsÂ¿ But what is the difference between executing telnet from VM1 to VM3 with and without NAT (in interface enp0s8 of VM2)? Use tcpdump to analyse the output and compare the differences.**
 
 You might want to run
 
@@ -339,31 +339,10 @@ You should also enable IP forwarding permanently on VM2. For that you need to ed
 net.ipv4.ip_forward=1
 ```
 
-## 5. Gracefully turn off the virtual machines (for rnl-virt only)
-
-To gracefully close the virtual machines which you deployed using the rnl-virt command, execute the following on VM1, VM2 and VM3:
-
-```bash
-$ sudo /sbin/poweroff
-```
-
-Now, on the host RNL machine, the above command should be enough for the machines to power off and their rnl-virt windows to close automatically. If so, we are done!
-If they do not, we must ask to stop the running virtual machine instances launched during this assignment. 
-It may occur that after running these commands, the system will say the machines were already stopped (due to executing the command above). 
-Ask rnl-virt to close the virtual machines anyway (if the virtual machines have been shut down, use the -f flag for the commands below):
-
-```bash
-$ rnl-virt vm stop VM1
-$ rnl-virt vm stop VM2
-$ rnl-virt vm stop VM3
-```
-
-After all the virtual machines have stopped, if their windows are still open on the host system (RNL computer) you may close their respective windows by pressing the X button on the top-right corner of the window.
-
 __You may now want to copy the files from /var/tmp to your home folder. You are going to need them for the next lab.__
 
 **Acknowledgments**
 
 Adapted by: Nuno Sabino
 
-Revised by: Pedro Adão, Miguel Pardal
+Revised by: Pedro AdÃ£o, Miguel Pardal
