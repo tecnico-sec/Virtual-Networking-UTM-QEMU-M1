@@ -27,7 +27,7 @@ To setup our lab environment to be used with VirtualBox, you need to have 3 inst
 If you decide to clone the existing machine you should
 
 - Right-Click on top of the machine name `VM1` and click `Clone`
-- Right-Click the machine once again, select `Edit` and edit the name you want to give to the new machine
+- Right-Click the machine once again, select `Edit` and edit the name you want to give to the new machine. Ie. `VM2`.
 
 Repeat this process twice and lets call the original machine VM1, and the new ones VM2 and VM3.
 
