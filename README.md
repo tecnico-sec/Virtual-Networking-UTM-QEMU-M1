@@ -2,14 +2,14 @@ Instituto Superior Técnico, Universidade de Lisboa
 
 **Network and Computer Security**
 
-# Lab guide: Implementation and Analysis of a Virtual Computer Network
+# Lab guide: Implementation and Analysis of a Virtual Computer Network (Mac OS - M1 Ready Version)
 
 ## Goals
 
 - Implement and test a virtual computer network.
 - Perform a simple TCP/IP packet analysis.
 
-## 1. UTM and QEMU
+## 1. UTM and QEMU 
 
 The setup of the machines for this lab depends on the usage of UTM, a software that leverages QEMU under the hood to perform virtualization. 
 Add here instructions to install and better explanation on the topic as well as awareness and references and promiscuous mode 
