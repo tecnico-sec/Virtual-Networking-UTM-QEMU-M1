@@ -51,7 +51,7 @@ To create a Network Adapter:
 - Add the folling option: `vmnet-macos,mode=host,id=sw1`.
 
 
-Repeat for VM2 and for VM3. Also, create a second Network adapter in VM2 by repeating the same procedure and replacing the `sw1` for `sw2` in both VM2(second adapter) and VM3. Please note that you should always generate a new MAC Address for each adapter. 
+Repeat for VM2 and for VM3. Also, create an additional Network adapter in VM2 by repeating the same procedure and replacing the `sw1` for `sw2` in both VM2(second adapter) and VM3. Please note that you should always generate a new MAC Address for each adapter. At the end of this step, both VM1 and VM2 should have one virtual network adapter each and VM2, two.
 Finally, create a third Network adapter in VM2 that is `nat`-ed with your physical address. You can do this by going to `Network` tab, select `Shared Network` and press `save`.
 This interface will be used to access the Internet.
 
