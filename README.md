@@ -313,8 +313,8 @@ In order to make them permanent you have to edit the corresponding `/etc/network
 
 ```
 ## On VM1
-auto enp0s3
-iface enp0s3 inet static
+auto enp0s7
+iface enp0s7 inet static
     address 192.168.0.100
     netmask 255.255.255.0
     gateway 192.168.0.10
@@ -323,8 +323,8 @@ iface enp0s3 inet static
 
 ```
 ### On VM2
-auto enp0s3
-iface enp0s3 inet static
+auto enp0s7
+iface enp0s7inet static
     address 192.168.0.10
     netmask 255.255.255.0
     dns-nameservers 8.8.8.8 8.8.4.4
@@ -341,8 +341,8 @@ iface enp0s9 inet dhcp
 
 ```
 ### On VM3
-auto enp0s3
-iface enp0s3 inet static
+auto enp0s7
+iface enp0s7 inet static
     address 192.168.1.1
     netmask 255.255.255.0
     gateway 192.168.1.254
@@ -359,6 +359,6 @@ __You may now want to copy the files from /var/tmp to your home folder. You are 
 
 **Acknowledgments**
 
-Adapted by: Nuno Sabino
+Adapted by: Miguel de Oliveira Guerreiro and Nuno Sabino
 
 Revised by: Pedro Adão, Miguel Pardal
