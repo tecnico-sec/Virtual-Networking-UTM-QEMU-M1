@@ -46,7 +46,7 @@ To create a Network Adapter:
 - Edit the VM1, go to `QEMU` section and scroll down until the last text box with the label `New...`. 
 - Go to `https://miniwebtool.com/mac-address-generator/`, click Generate MAC Address and copy the generated MAC.
 - Add the following option: `-device` and press `Enter` at the end:
-- A new line will appear. Add the following option: `virtio-net-pci,mac=<GENERATED MAC>,netdev=sw1` where `<GENERATED MAC>` is the MAC address generated in the previous step.
+- A new line will appear. Add the following option: `e1000-82545em,mac=2E:1F:EA:A1:D8:35,netdev=sw1` where `<GENERATED MAC>` is the MAC address generated in the previous step.
 - Add the following option: `-netdev`.
 - Add the folling option: `vmnet-macos,mode=host,id=sw1`.
 
@@ -89,12 +89,14 @@ First, assign an IP address to VM1 on interface enp0s3.
 
 ```bash
 $ sudo ifconfig enp0s3 192.168.0.100/24 up
+$ sudo ip route add 192.168.0.0/24 dev enp0s3
 ```
 
 And do the same for VM2 (again, note that the interface name may be different)
 
 ```bash
 $ sudo ifconfig enp0s3 192.168.0.10/24 up
+$ sudo ip route add 192.168.0.0/24 dev enp0s3
 ```
 
 Now running `ifconfig` on the VMs should show the respective assigned IP addresses on interface enp0s3. 
