@@ -100,17 +100,17 @@ Running `ip a` shows the MAC address of each interface and you can compare with 
 First, assign an IP address to VM1 on interface enp0s3. You also need to set routes for the chosen subnet and enable promiscuous mode in `enp0s3` interface.
 
 ```bash
-$ sudo ifconfig enp0s3 192.168.0.100/24 up
-$ sudo ip route add 192.168.0.0/24 dev enp0s3
-$ sudo ip link set enp0s3 promisc on
+$ sudo ifconfig enp0s7 192.168.0.100/24 up
+$ sudo ip route add 192.168.0.0/24 dev enp0s7
+$ sudo ip link set enp0s7 promisc on
 ```
 
 And do the same for VM2 (again, note that the interface name may be different)
 
 ```bash
-$ sudo ifconfig enp0s3 192.168.0.10/24 up
-$ sudo ip route add 192.168.0.0/24 dev enp0s3
-$ sudo ip link set enp0s3 promisc on
+$ sudo ifconfig enp0s7 192.168.0.10/24 up
+$ sudo ip route add 192.168.0.0/24 dev enp0s7
+$ sudo ip link set enp0s7 promisc on
 ```
 
 Now running `ifconfig` on the VMs should show the respective assigned IP addresses on interface enp0s3. 
