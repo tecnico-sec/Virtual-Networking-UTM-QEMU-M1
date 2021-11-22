@@ -55,11 +55,11 @@ To create a Network Adapter:
 
 
 Repeat for VM2 and for VM3. Also, create an additional Network adapter in VM2 by repeating the same procedure and replacing the `sw1` for `sw2` in both VM2(second adapter) and VM3. Please note that you should always generate a new MAC Address for each adapter. At the end of this step, both VM1 and VM2 should have one virtual network adapter each and VM2, two.
-Finally, create a third Network adapter in VM2 that is `nat`-ed with your physical address. You can do this by going repating the same procedure to create a virtuan network interface, this time, adding the following options:
-`-device`
-`rtl8139,mac=<GENERATED MAC>,netdev=web`
-`-netdev`
-`vmnet-macos,mode=bridged,id=web,ifname=en0`
+Finally, create a third Network adapter in VM2 that is `nat`-ed with your physical address. You can do this by repeating the same procedure to create a virtual network interface, this time, adding the following options:
+- `-device`
+- `rtl8139,mac=<GENERATED MAC>,netdev=web`
+- `-netdev`
+- `vmnet-macos,mode=bridged,id=web,ifname=en0`
 
 This interface will be used to access the Internet.
 
