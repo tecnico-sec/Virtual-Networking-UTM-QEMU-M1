@@ -34,6 +34,10 @@ If you decide to clone the existing machine you should
 
 Repeat this process again and lets call the original machine VM1, and the new ones VM2 and VM3.
 
+The login credentials for the machine will be:
+- User: ``debian``
+- Password: ``debian``
+
 The intended topology of our network is shown in Figure 2 with VM2 also connected to the Internet (with an IP address that is obtained via DHCP).
 
 <img src="./figure2.png" alt="alt text" width="200">
