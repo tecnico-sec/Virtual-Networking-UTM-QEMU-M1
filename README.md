@@ -19,7 +19,7 @@ Please note that this setup is still experimental, errors may occur.
 
 ## 1.1 Setup the lab for UTM
 
-To setup our lab environment to be used with VirtualBox, you need to have 3 instances of your VMs. You can follow the instructions in [here](https://github.com/tecnico-sec/Setup) to install 2 new machines from scratch, or you can clone the one you have been using so far.
+To setup our lab environment to be used with UTM, you need to have 3 instances of your VMs. You can follow the instructions in [here](https://github.com/tecnico-sec/Setup) to install 2 new machines from scratch, or you can clone the one you have been using so far.
 
 <img src="./figure1.png" alt="alt text" width="400">
 
