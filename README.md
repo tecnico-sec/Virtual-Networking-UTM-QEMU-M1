@@ -2,7 +2,7 @@ Instituto Superior Técnico, Universidade de Lisboa
 
 **Network and Computer Security**
 
-# Lab guide: Implementation and Analysis of a Virtual Computer Network (Mac OS - M1 Ready Version)
+# Lab guide: Implementation and Analysis of a Virtual Computer Network (Mac OS - M1 Ready Version) [Unstable]
 
 ## Goals
 
@@ -12,7 +12,10 @@ Instituto Superior Técnico, Universidade de Lisboa
 ## 1. UTM and QEMU 
 
 The setup of the machines for this lab depends on the usage of UTM, a software that leverages QEMU under the hood to perform virtualization. 
-Add here instructions to install and better explanation on the topic as well as awareness and references and promiscuous mode 
+Please note that this setup is still experimental, errors may occur. 
+- Start by downloading and installing UTM. ``https://mac.getutm.app``
+- Download the VM image from ``URL``. Within the UTM App, go to ``File``, select ``Import Virtual Machine`` and select the file you've just downloaded.
+
 
 ## 1.1 Setup the lab for UTM
 
@@ -83,13 +86,14 @@ These `en...` values are the network interface names and are automatically assig
 
 _How do you know which interface is connected to sw-1 and which one is connected to sw-2? 
 Look at their MAC Addresses. 
-Running `ip a` shows the MAC address of each interface and you can compare with those of VirtualBox._
+Running `ip a` shows the MAC address of each interface and you can compare with those of UTM._
 
-First, assign an IP address to VM1 on interface enp0s3.
+First, assign an IP address to VM1 on interface enp0s3. You also need to set routes for the chosen subnet and enable promiscuous mode in `enp0s3` interface.
 
 ```bash
 $ sudo ifconfig enp0s3 192.168.0.100/24 up
 $ sudo ip route add 192.168.0.0/24 dev enp0s3
+$ sudo ip link set enp0s3 promisc on
 ```
 
 And do the same for VM2 (again, note that the interface name may be different)
@@ -97,6 +101,7 @@ And do the same for VM2 (again, note that the interface name may be different)
 ```bash
 $ sudo ifconfig enp0s3 192.168.0.10/24 up
 $ sudo ip route add 192.168.0.0/24 dev enp0s3
+$ sudo ip link set enp0s3 promisc on
 ```
 
 Now running `ifconfig` on the VMs should show the respective assigned IP addresses on interface enp0s3. 
