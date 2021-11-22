@@ -55,7 +55,12 @@ To create a Network Adapter:
 
 
 Repeat for VM2 and for VM3. Also, create an additional Network adapter in VM2 by repeating the same procedure and replacing the `sw1` for `sw2` in both VM2(second adapter) and VM3. Please note that you should always generate a new MAC Address for each adapter. At the end of this step, both VM1 and VM2 should have one virtual network adapter each and VM2, two.
-Finally, create a third Network adapter in VM2 that is `nat`-ed with your physical address. You can do this by going to `Network` tab, select Network Mode: `Bridged(Advanced`, Emulated Network Card: `rtl8139` and press `save`.
+Finally, create a third Network adapter in VM2 that is `nat`-ed with your physical address. You can do this by going repating the same procedure to create a virtuan network interface, this time, adding the following options:
+`-device`
+`rtl8139,mac=<GENERATED MAC>,netdev=web`
+`-netdev`
+`vmnet-macos,mode=bridged,id=web,ifname=en0`
+
 This interface will be used to access the Internet.
 
 Proceed now to 2.
@@ -81,7 +86,7 @@ The values ending with 100 and 10 are arbitrary, they could be any (different) v
 
 Follow the configuration procedure below for both VM1 and VM2.
 
-We are assuming that VM1 has an interface `enp0s3`(connected to sw-1) and VM2 has interfaces `enp0s3` (connected to sw-1), `enp0s8` (connected to sw-2), and `enp0s9` (connected to the internet). 
+We are assuming that VM1 has an interface `enp0s7`(connected to sw-1) and VM2 has interfaces `enp0s7` (connected to sw-1), `enp0s8` (connected to sw-2), and `enp0s9` (connected to the internet). 
 These `en...` values are the network interface names and are automatically assigned by the operating system following a [device naming convention](https://www.freedesktop.org/wiki/Software/systemd/PredictableNetworkInterfaceNames/).
 
 _How do you know which interface is connected to sw-1 and which one is connected to sw-2? 
