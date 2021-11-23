@@ -14,7 +14,7 @@ Instituto Superior Técnico, Universidade de Lisboa
 The setup of the machines for this lab depends on the usage of UTM, a software that leverages QEMU under the hood to perform virtualization. 
 Please note that this setup is still experimental, errors may occur. 
 - Start by downloading and installing UTM. [https://mac.getutm.app](https://mac.getutm.app)
-- Download the VM image from [here](https://drive.google.com/drive/folders/1ABZiczg-tHNnNGtzT2E9wVs2RwenDqQE?usp=sharing). Within the UTM App, go to ``File``, select ``Import Virtual Machine`` and select the file you've just downloaded.
+- Download the VM image from [here](https://drive.google.com/file/d/19obcri3xbvMF_8qbrcsgiJYetJRUFjjw/view?usp=sharing). Within the UTM App, go to ``File``, select ``Import Virtual Machine`` and select the file you've just downloaded.
 
 
 ## 1.1 Setup the lab for UTM
