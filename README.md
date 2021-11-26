@@ -28,7 +28,7 @@ Please note that this setup is still experimental, crashes are very likely to oc
 
 ## 1.1 Setup the lab for UTM
 
-To setup our lab environment to be used with UTM, you need to have 3 instances of your VMs. You can follow the instructions in [here](https://github.com/tecnico-sec/Setup) to install 2 new machines from scratch, or you can clone the one you have been using so far.
+To setup our lab environment to be used with UTM, you need to have 3 instances of your VMs. You can either the rename the downloaded file to, i.e VM2.utm and import it again, or you can clone the one you have been using so far.
 
 <img src="./figure1.png" alt="alt text" width="400">
 
