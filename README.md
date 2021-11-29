@@ -60,7 +60,7 @@ The easier way to connect the VM1 and VM2 in the same network is to do the follo
 To create a Network Adapter:
 
 - Edit the VM1, go to `QEMU` section and scroll down until the last text box with the label `New...`. 
-- Go to [https://miniwebtool.com/mac-address-generator/](https://miniwebtool.com/mac-address-generator/), click Generate MAC Address and copy the generated MAC.
+- Go to [MAC Address Generator](https://www.hellion.org.uk/cgi-bin/randmac.pl?scope=local&type=unicast), click Generate MAC Address and copy the generated MAC (with colons).
 - Add the following option: `-device` and press `Enter` at the end:
 - A new line will appear. Add the following option: `e1000-82545em,mac=<GENERATED MAC>,netdev=sw1` where `<GENERATED MAC>` is the MAC address generated in the previous step.
 - Add the following option: `-netdev`.
