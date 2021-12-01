@@ -6,7 +6,7 @@ Instituto Superior Técnico, Universidade de Lisboa
 
 The recommended work environment is a personal computer with VirtualBox installed.
 However, this environment requires an Intel x86-64 processor architecture.
-Namely, it is not compatible with the Apple M1 processors. You must be running Mac OS Monterey version, versions below won't work. 
+Namely, it is not compatible with the Apple M1 processors. You must be running Mac OS Monterey, versions below won't work. 
 
 This guide tries to provide an alternative.
 It is operational, but it is **unstable**, meaning it will crash often. 
