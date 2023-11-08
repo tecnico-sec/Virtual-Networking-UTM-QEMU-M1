@@ -23,7 +23,7 @@ The setup of the machines for this lab depends on the usage of [UTM](https://mac
 Please note that this setup is still experimental, crashes are very likely to occur.
 
 - Start by downloading and installing UTM. [https://mac.getutm.app](https://mac.getutm.app)
-- Download the VM image from [here](https://drive.google.com/file/d/19obcri3xbvMF_8qbrcsgiJYetJRUFjjw/view?usp=sharing). 
+- Download the VM image from [here](https://drive.google.com/file/d/1rxEkMFJIhyJCH3LmlMApHmtwqvTTWvfo/view?usp=share_link). 
 - Within the UTM App, go to ``File``, select ``Import Virtual Machine`` and select the file you've just downloaded.
 
 ## 1.1 Setup the lab for UTM
